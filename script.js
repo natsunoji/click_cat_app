@@ -1,3 +1,17 @@
+// 期間限定公開の設定
+const PUBLISH_END_DATE = '2025-11-30';
+
+if (new Date() > new Date(PUBLISH_END_DATE)) {
+  document.body.innerHTML = `
+    <div style="text-align: center; padding: 50px; font-family: Arial;">
+      <h1>秋のまめちしき</h1>
+      <p>公開期間が終了しました</p>
+      <p>ありがとうございました！</p>
+    </div>
+  `;
+  throw new Error('App expired'); // 以降の処理を停止
+}
+
 // リアルタイム時計機能
 function updateClock() {
   const now =new Date();
