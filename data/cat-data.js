@@ -4,19 +4,19 @@ const catData = [
   {
     id: 1,
     name: "座りポーズ",
-    image: "",
+    image: "images/cat_pose1.png",
     description: "上品に座っているにゃ"
   },
   {
     id: 2,
     name: "伸びポーズ",
-    image: "",
+    image: "images/cat_pose2.png",
     description: "元気に伸びをしているにゃ"
   },
   {
     id: 3,
     name: "寝転びポーズ",
-    image: "",
+    image: "images/cat_pose2.png",
     description: "リラックスしてごろごろ寝転んでいるにゃ"
   },
 ];
@@ -24,6 +24,6 @@ const catData = [
 // ねこちゃんの基本情報
 const catInfo = {
   name: "もみじ",
-  color: "茶トラ",
+  color: "クリーム",
   personality: "のんびり屋さんで豆知識と美味しいものが大好き"
 };

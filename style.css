@@ -43,15 +43,15 @@ h1{
 }
 
 .balloon-area {
-  height: 120px;          /* 吹き出しエリアの高さを固定 */
+  height: 120px; /* 吹き出しエリアの高さを固定 */
   display: flex;
-  align-items: center;    /* 縦方向中央揃え */
+  align-items: center; /* 縦方向中央揃え */
   justify-content: center; /* 横方向中央揃え */
-  margin-bottom: 30px;    /* 猫との間隔 */
+  margin-bottom: 20px; /* ねことの間隔 */
 }
 
 .balloon {
-  background: #fff3cd;
+  background: linear-gradient(135deg, #fff3cd, #ffeaa7);
   border: 3px solid #ff9a56;
   border-radius: 20px;
   padding: 20px;
@@ -63,6 +63,10 @@ h1{
   min-height: 60px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(255, 154, 86, 0.3);
+  backdrop-filter: blur(5px);
 }
 
 .balloon::before {
@@ -83,6 +87,20 @@ h1{
   font-size: 1.1em;
   color: #333;
   line-height: 1.5;
+  text-align: center;
+  width: 100%;
+  font-weight: 500;
+}
+
+.balloon.short-text #balloon-text {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #d63031;
+}
+
+.balloon.lomg-text {
+  align-items: flex-start;
+  padding-top: 25px;
 }
 
 .button-container {
@@ -162,8 +180,17 @@ button:active {
   }
 
   .balloon {
-    margin: 15px 0;
+    margin: 15px 10px; /* 左右のmarginを調整 */
     padding: 15px;
+    max-width: calc(100% - 40px); /* 画面幅に合わせて調整を追加 */
+  }
+  #balloon-text {
+    font-size: 1.0em; /* モバイルでは少し小さめに設定 */
+    line-height: 1,4;
+  }
+
+  .balloon.short-text #balloon-text {
+    font-size: 1.2em;
   }
 
   .digital-clock {

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>秋の豆知識</title>
+  <title>秋のまめちしき</title>
   
   <!-- OGP設定 -->
   <meta property="og:title" content="🍂 秋のまめちしき 🍂">
@@ -30,30 +30,35 @@
 </head>
 <body>
   <div class="container">
-    <!-- 時計を表示するエリア -->
+    <h1>🍂 秋のまめちしき 🍂</h1>
+
+    <!-- 時計 -->
     <div class="clock-sontainer">
       <div id="current-time" class="digital-clock">
         読み込み中・・・
       </div>
     </div>
-    <h1>🍂 秋のまめちしき 🍂</h1>
-  
+
     <!--吹き出し-->
     <div id="balloon" class="balloon">
       <p id="balloon-text">ねこをクリックして秋の豆知識を開いてみるにゃ</p>
     </div>
-
+    
     <!--ねこの画像-->
     <div class="cat-container">
       <img id="cat-image" src="images/cat_pose1.png" alt="猫のもみじちゃん">
     </div>
-
-    <!--ポーズの切り替えボタン-->
+    
+    <!--ねこのポーズの切り替えボタン-->
     <div class="button-container">
       <button onclick="changeCat(1)">座りポーズ</button>
       <button onclick="changeCat(2)">伸びポーズ</button>
       <button onclick="changeCat(3)">寝転びポーズ</button>
     </div>
+
+    <!-- 説明文の追加 -->
+    <p class="click-hint">ねこをクリック → 豆知識が変わるよ</p>
+    <p class="click-hint">ポーズボタンをクリック → ねこのポーズが変わるよ</p>
   </div>
 
   <!-- JaveScriptファイル読み込み-->
